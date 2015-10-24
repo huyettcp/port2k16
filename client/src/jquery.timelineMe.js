@@ -274,13 +274,13 @@
 
         // Method that build html element for corresponding item
         _buildMilestoneElement: function(item) {
-            var milestoneElm = $('<div class="timeline-me-item timeline-me-milestone">');
+            var milestoneElm = $('<div class="timeline-me-item timeline-me-milestone timeline-me-displayfull">');
             return milestoneElm;
         },
 
         // Method that build html element for corresponding item
         _buildSmallItemElement: function(item) {
-            var smallItemElm = $('<div class="timeline-me-item timeline-me-smallitem">');  
+            var smallItemElm = $('<div class="timeline-me-item timeline-me-smallitem timeline-me-displayfull">');  
             return smallItemElm;
         },
 

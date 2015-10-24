@@ -17,3 +17,17 @@ div.indicator {
 	height: 3px !important;
 }
 
+body{
+
+}
+
+.custom-show-btn {
+  position: absolute; 
+  right: 20px; 
+  bottom: -12px; 
+  background-color: #359BCE; 
+  border-radius: 50%;
+  color: #FFFFFF;
+  height: 24px;
+  width: 24px;
+}
