@@ -1,0 +1,19 @@
+#header {
+	background-color: #006064;
+	padding-top: 1rem;
+}
+
+.header_tabs {
+	background-color: #006064;
+	
+}
+
+.over {
+	text-align: left !important;
+}
+
+div.indicator {
+	width: 20% !important;
+	height: 3px !important;
+}
+

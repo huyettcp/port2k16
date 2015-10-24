@@ -1,0 +1,439 @@
+/* ---------------- *\
+   GLOBAL VARIABLES
+\* ---------------- */
+
+$item-bg-color: #ffffff;
+$timeline-color: #555555;
+
+$label-bg-color: $item-bg-color;
+$label-picto-size: 30px;
+$label-picto-border: 3px;
+$label-picto-border-color: $timeline-color;
+$label-picto-total-size: $label-picto-size + 2 * $label-picto-border;
+$label-picto-sepa: 3px;
+
+
+/* ------ *\
+   MIXINS
+\* ------ */
+
+@mixin transform($args...) {
+	-webkit-transform: $args;
+	-moz-transform: $args;
+	-ms-transform: $args;
+	-o-transform: $args;
+	transform: $args;
+}
+
+@mixin transform-style($style: flat) {
+	-moz-transform-style: $style;
+	-webkit-transform-style: $style;
+	-ms-transform-style: $style;
+	-o-transform-style: $style;
+	transform-style: $style;
+}
+
+@mixin perspective($value) {
+	-moz-perspective: $value;
+	-webkit-perspective: $value;
+	-ms-perspective: $value;
+	-o-perspective: $value;
+	perspective: $value;
+}
+
+@mixin rotateY($degrees) {
+	-moz-transform: rotateY($degrees);
+	-webkit-transform: rotateY($degrees);
+	-ms-transform: rotateY($degrees);
+	-o-transform: rotateY($degrees);
+	transform: rotateY($degrees);
+}
+
+@mixin backface-visibility($visibility: visible) {
+	-moz-backface-visibility: $visibility;
+	-webkit-backface-visibility: $visibility;
+	-ms-backface-visibility: $visibility;
+	-o-backface-visibility: $visibility;
+	backface-visibility: $visibility;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+
+
+/* -------------- *\
+   MAIN CONTAINER
+\* -------------- */
+
+.timeline-me-container {
+	position: relative;
+
+	&:before {
+	    content: '';
+	    position: absolute;
+	    top: 0;
+	    left: 50%;
+	    margin-left: -2px;
+	    height: 100%;
+	    width: 4px;
+	    background: $timeline-color;
+	}
+}
+
+
+
+/* -------------------- *\
+   GENERIC ITEM'S STYLE
+\* -------------------- */
+
+.timeline-me-item {
+	position: relative;
+	margin: 20px 0px;
+}
+
+.timeline-me-label {}
+
+.timeline-me-content { 
+	position: relative; 
+	@include transform-style(preserve-3d);
+}
+
+.timeline-me-shortcontent,
+.timeline-me-fullcontent {
+	position: relative;
+	box-sizing: border-box;
+	width: 100%;
+	background-color: $item-bg-color;
+	line-height: 20px;
+	border-radius: 2px;
+}
+
+.timeline-me-showmore { display: block; }
+
+.timeline-me-showless { display: none; }
+
+
+
+/* ----------------- *\
+   MILESTONE ELEMENT
+\* ----------------- */
+
+.timeline-me-milestone {
+	.timeline-me-label {
+		position: relative;
+
+		.timeline-me-picto {
+			position: absolute;
+			box-sizing: content-box;
+		    height: $label-picto-size;
+		    width: $label-picto-size;
+		    background-color: $label-bg-color;
+		    border-radius: 50%;
+		    border: $label-picto-border solid $timeline-color;
+		    z-index: 100;
+		    text-align: center; 
+		    overflow: hidden;
+		}
+	}
+
+	/* Specific for 'right' position item - default one */
+    &.timeline-me-right,
+    &:not(.timeline-me-top):not(.timeline-me-left):not(.timeline-me-bottom) {
+    	width: 50%;
+    	margin-left: 50%;
+
+		.timeline-me-label {
+			height: $label-picto-total-size;
+			line-height: $label-picto-total-size;
+			padding-left: ($label-picto-total-size + $label-picto-sepa); 
+			margin-left: - ($label-picto-total-size / 2);
+
+			.timeline-me-picto { 
+				top: 0;
+				left: 0; 
+			}
+		}
+	}
+
+	/* Specific for 'top' position item */
+	&.timeline-me-top {
+		margin: auto;
+		text-align: center;
+
+		.timeline-me-label { 
+			padding-bottom: ($label-picto-total-size + $label-picto-sepa);
+
+			.timeline-me-picto {
+				bottom: 0px;
+				left: 50%;
+    			margin-left: - ($label-picto-total-size / 2);
+			}
+		}
+	}
+
+	/* Specific for 'left' position item */
+	&.timeline-me-left {
+		width: 50%;
+		margin-right: 50%;
+    	text-align: right;
+
+		.timeline-me-label {
+			height: $label-picto-total-size;
+			line-height: $label-picto-total-size;
+			padding-right: ($label-picto-total-size + $label-picto-sepa);
+			margin-right: - ($label-picto-total-size / 2);
+
+			.timeline-me-picto { 
+				top: 0;
+				right: 0px; 
+			}
+		}
+	}
+
+	/* Specific for 'bottom' position item */
+	&.timeline-me-bottom {
+		margin: auto;
+		text-align: center;
+
+		.timeline-me-label {
+			padding-top: ($label-picto-total-size + $label-picto-sepa);
+
+			.timeline-me-picto {
+				top: 0px;
+				left: 50%;
+    			margin-left: - ($label-picto-total-size / 2);
+			}
+		}
+	}
+
+	.timeline-me-shortcontent { display: none; }
+}
+
+
+
+/* ----------------- *\
+   SMALLITEM ELEMENT
+\* ----------------- */
+
+.timeline-me-smallitem {
+	.timeline-me-label {
+		position: absolute;
+
+		.timeline-me-picto {
+			position: absolute;
+			box-sizing: content-box;
+		    height: $label-picto-size;
+		    width: $label-picto-size;
+		    background-color: $label-bg-color;
+		    border-radius: 50%;
+		    border: $label-picto-border solid $timeline-color;
+		    z-index: 100;
+		    text-align: center; 
+		    overflow: hidden;
+		}
+	}
+
+	/* Specific for 'left' position item - default one */
+	&.timeline-me-left,
+	&:not(.timeline-me-top):not(.timeline-me-right):not(.timeline-me-bottom) {
+		.timeline-me-label {
+				height: $label-picto-total-size;
+				line-height: $label-picto-total-size;
+			    left: 50%;
+			    top: 12px - ($label-picto-total-size / 2);
+			    margin-left: - ($label-picto-total-size / 2);
+			    text-align: left;
+			    padding-left: ($label-picto-total-size + $label-picto-sepa);
+
+			.timeline-me-picto { 
+				top: 0;
+				left: 0px; 
+			}
+		}
+		.timeline-me-content-container { 
+			width: 40%;
+			margin-left: 10%;
+			padding-right: ($label-picto-total-size / 2) + 7px;
+		}
+		.timeline-me-fullcontent,
+		.timeline-me-shortcontent {  
+			&:before {
+			    background-color: inherit;
+			    transform: rotate(45deg);
+			    @include transform(rotate(45deg));
+			    height: 10px;
+			    width: 10px;
+			    right: -5px;
+			}
+		}
+	}
+
+	/* Specific for 'top' position item */
+	&.timeline-me-top {
+
+	}
+
+	/* Specific for 'right' position item */
+	&.timeline-me-right {
+		.timeline-me-label {
+			height: $label-picto-total-size;
+			line-height: $label-picto-total-size;
+			right: 50%;
+			top: 12px - ($label-picto-total-size / 2);
+			margin-right: - ($label-picto-total-size / 2);
+		    text-align: right;
+		    padding-right: ($label-picto-total-size + $label-picto-sepa);
+
+			.timeline-me-picto { 
+				top: 0;
+				right: 0px; 
+			}
+		}
+		.timeline-me-content-container { 
+			width: 40%;
+			margin-left: 50%;
+			padding-left: ($label-picto-total-size / 2) + 7px;
+		}
+		.timeline-me-fullcontent,
+		.timeline-me-shortcontent {  
+			&:before {
+			    background-color: inherit;
+			    @include transform(rotate(45deg));
+			    height: 10px;
+			    width: 10px;
+			    left: -5px;
+			}
+		}
+	}
+
+	/* Specific for 'bottom' position item */
+	&.timeline-me-bottom {
+
+	}
+
+	.timeline-me-content-container { box-sizing: border-box; }
+
+	.timeline-me-fullcontent,
+	.timeline-me-shortcontent {  
+		padding: 10px;
+
+		&:before {
+		    content: '';
+		    position: absolute;
+		    top: 7px;
+		}
+	}
+
+	.timeline-me-displayfull,
+	&.timeline-me-displayfull {
+		.timeline-me-shortcontent { display: none; }
+
+		.timeline-me-fullcontent { display: block; }
+
+		.timeline-me-showmore { display: none; }
+
+		.timeline-me-showless { display: block; }
+	}
+
+	.timeline-me-shortcontent { display: block; }
+
+	.timeline-me-fullcontent { display: none; }
+}
+
+
+
+/* --------------- *\
+   BIGITEM ELEMENT
+\* --------------- */
+
+.timeline-me-bigitem {
+	.timeline-me-label {
+		position: relative;
+		margin-bottom: 10px;
+		text-align: center; 
+		padding-bottom: ($label-picto-total-size + $label-picto-sepa);
+
+		.timeline-me-picto {
+			position: absolute;
+			box-sizing: content-box;
+		    height: $label-picto-size;
+		    width: $label-picto-size;
+		    background-color: $label-bg-color;
+		    border-radius: 50%;
+		    border: $label-picto-border solid $timeline-color;
+		    z-index: 100;
+			bottom: 0px;
+			left: 50%;
+			margin-left: - ($label-picto-total-size / 2);
+			text-align: center; 
+			overflow: hidden;
+		}
+	}
+
+	.timeline-me-content-container { 
+		width: 80%;
+		margin: auto;
+	}
+
+	.timeline-me-fullcontent,
+	.timeline-me-shortcontent {
+		padding: 20px;
+	}
+
+	.timeline-me-flipped,
+	&.timeline-me-flipped {
+		.timeline-me-showmore { display: none; }
+
+		.timeline-me-showless { display: block; }
+	}
+}
+
+
+
+/* --------------- *\
+   BIGITEM 3D-FLIP
+\* --------------- */
+
+/* entire container, keeps perspective */
+.timeline-me-bigitem {
+    @include perspective(1500px);
+	@include transform-style(preserve-3d);
+
+	/* flip the pane when hovered */
+	&.timeline-me-flipped .timeline-me-content-container { 
+		@include rotateY(180deg);
+	}
+
+	/* Configure flip speed */
+	.timeline-me-content-container {
+		@include transition(.6s);
+		@include transform-style(preserve-3d);
+		position: relative;
+	}
+
+	/* Hide back of pane during flip */
+	.timeline-me-shortcontent, .timeline-me-fullcontent {
+		@include backface-visibility(hidden);
+		@include transform-style(preserve-3d);
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	/* Front pane, placed above back */
+	.timeline-me-shortcontent {
+		z-index: 2;
+		@include rotateY(0deg);
+	}
+
+	/* Back pane, initially hidden pane */
+	.timeline-me-fullcontent { 
+		@include rotateY(180deg);
+	}
+}

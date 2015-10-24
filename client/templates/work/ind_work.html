@@ -1,0 +1,24 @@
+<template name="indWork">
+<div class="col s12 m6 l6">
+  <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{{image_url}}">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">{{title}}<i class="material-icons right">more_vert</i></span>
+      <p><a href="{{url}}">Go to Site</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">{{title}}<i class="material-icons right">close</i>
+      </span>
+      <p><a href="{{url}}">Go to Site</a><br><a href="{{url}}">Github Repo</a>
+      </p>
+      <p>{{description}}</p>
+      <ul>Technologies Used
+      	<li><a href="{{technology_1_link}}">{{technology_1}}</a></li>
+      	<li>{{technology_2}}</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</template>
