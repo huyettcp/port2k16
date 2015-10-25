@@ -260,9 +260,8 @@
 \* --------------- */
 .timeline-me-bigitem .timeline-me-label {
   position: relative;
-  margin-bottom: 10px;
   text-align: center;
-  padding-bottom: 39px;
+  
 }
 .timeline-me-bigitem .timeline-me-label .timeline-me-picto {
   position: absolute;

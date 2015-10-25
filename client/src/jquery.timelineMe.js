@@ -299,8 +299,7 @@
             item.element.append(labelElm);
             item.labelElement = labelElm;
 
-            var pictoElm = $('<div class="timeline-me-picto">');
-            item.pictoElement = pictoElm;
+   
 
             if(item.type == 'smallItem' || item.type == 'bigItem') {
                 var contentContainer = $('<div class="timeline-me-content-container">');

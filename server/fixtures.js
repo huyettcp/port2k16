@@ -24,5 +24,33 @@ if (Projects.find().count() === 0) {
 
 	});
 
+	SkillCategories.insert({
+		category_title: 'Languages'
+
+	});
+
+	SkillCategories.insert({
+		category_title: 'Front-End'
+
+	});
+
+	SkillCategories.insert({
+		category_title: 'Back-End'
+
+	});
+
+	SkillCategories.insert({
+		category_title: 'Databases'
+
+	});
+
+	SkillCategories.insert({
+		category_title: 'Product/Product Management'
+
+	});
+
+
+
+
 
 }

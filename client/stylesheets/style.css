@@ -31,3 +31,9 @@ body{
   height: 24px;
   width: 24px;
 }
+
+.date_box {
+	background-color: red;
+	padding: .5%
+}
+
