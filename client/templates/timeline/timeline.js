@@ -37,9 +37,3 @@ $('#timeline-container-custom-classes').timelineMe({
 }
 
 
-Template.timeline.helpers({
-  skill_categories: function() {
-    return SkillCategories.find()
-  }
-})
-

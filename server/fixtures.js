@@ -24,10 +24,11 @@ if (Projects.find().count() === 0) {
 
 	});
 
-	SkillCategories.insert({
+	var languagesId = SkillCategories.insert({
 		category_title: 'Languages'
 
 	});
+
 
 	SkillCategories.insert({
 		category_title: 'Front-End'
@@ -49,8 +50,16 @@ if (Projects.find().count() === 0) {
 
 	});
 
+	SkillCategories.insert({
+		category_title: 'Product/Product Management'
+
+	});
 
 
+	SkillInds.insert({
+		skill_title: 'JavaScript',
+		category_id: languagesId
+	});
 
 
 }

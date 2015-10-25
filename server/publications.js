@@ -5,3 +5,7 @@ Meteor.publish('projects', function() {
 Meteor.publish('skill_categories', function() {
   return SkillCategories.find();
 });
+
+Meteor.publish('skill_inds', function() {
+	return SkillInds.find();
+});

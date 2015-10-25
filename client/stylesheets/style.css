@@ -1,6 +1,7 @@
 #header {
 	background-color: #006064;
 	padding-top: 1rem;
+
 }
 
 .header_tabs {
@@ -33,7 +34,10 @@ body{
 }
 
 .date_box {
-	background-color: red;
-	padding: .5%
+	background-color: white;
+	padding: .5%;
+	font-size: 14px;
 }
+
+
 
