@@ -29,28 +29,23 @@ if (Projects.find().count() === 0) {
 
 	});
 
+	var frameworkId = SkillCategories.insert({
+		category_title: 'Framework'
 
-	SkillCategories.insert({
+	});
+
+	var frontEndId = SkillCategories.insert({
 		category_title: 'Front-End'
 
 	});
 
-	SkillCategories.insert({
-		category_title: 'Back-End'
 
-	});
-
-	SkillCategories.insert({
+	var databasesId = SkillCategories.insert({
 		category_title: 'Databases'
 
 	});
 
-	SkillCategories.insert({
-		category_title: 'Product/Product Management'
-
-	});
-
-	SkillCategories.insert({
+	var pmId = SkillCategories.insert({
 		category_title: 'Product/Product Management'
 
 	});
@@ -61,5 +56,119 @@ if (Projects.find().count() === 0) {
 		category_id: languagesId
 	});
 
+	SkillInds.insert({
+		skill_title: 'Ruby',
+		category_id: languagesId
+	});
 
+	SkillInds.insert({
+		skill_title: 'HTML5',
+		category_id: languagesId
+	});
+
+	SkillInds.insert({
+		skill_title: 'CSS3',
+		category_id: languagesId
+	});
+
+		SkillInds.insert({
+		skill_title: 'JavaScript',
+		category_id: languagesId
+	});
+
+	SkillInds.insert({
+		skill_title: 'Ruby',
+		category_id: languagesId
+	});
+
+	SkillInds.insert({
+		skill_title: 'HTML5',
+		category_id: languagesId
+	});
+
+	SkillInds.insert({
+		skill_title: 'CSS3',
+		category_id: languagesId
+	});
+
+	SkillInds.insert({
+		skill_title: 'D3.js',
+		category_id: frontEndId
+	});
+
+	SkillInds.insert({
+		skill_title: 'jQuery',
+		category_id:frontEndId
+	});
+
+	SkillInds.insert({
+		skill_title: 'Materialize',
+		category_id:frontEndId
+	});
+
+	SkillInds.insert({
+		skill_title: 'Meteor.js',
+		category_id: frameworkId
+	});
+
+	SkillInds.insert({
+		skill_title: 'Ruby on Rails',
+		category_id: frameworkId
+	});
+
+	SkillInds.insert({
+		skill_title: 'Sinatra',
+		category_id: frameworkId
+	});
+
+	SkillInds.insert({
+		skill_title: 'SQL',
+		category_id: databasesId
+	});
+
+	SkillInds.insert({
+		skill_title: 'PostgreSQL',
+		category_id: databasesId
+	});
+
+
+	SkillInds.insert({
+		skill_title: 'MongoDB',
+		category_id: databasesId
+	});
+
+
+	SkillInds.insert({
+		skill_title: 'GitHub',
+		category_id: pmId
+	});
+
+	SkillInds.insert({
+		skill_title: 'Jira',
+		category_id: pmId
+	});
+
+	SkillInds.insert({
+		skill_title: 'Office Suite',
+		category_id: pmId
+	});
+
+	SkillInds.insert({
+		skill_title: 'Balsamiq',
+		category_id: pmId
+	});
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
