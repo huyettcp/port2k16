@@ -50,6 +50,7 @@ div.indicator {
 	background-color: white;
 	padding: .5%;
 	font-size: 14px;
+	color: #ff9100
 }
 
 .tabs .tab a:hover {
@@ -64,6 +65,10 @@ a{
 
 h3 {
 
+}
+
+.plus {
+	background-color: #ff9100 !important;
 }
 
 
