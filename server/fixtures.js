@@ -30,7 +30,7 @@ if (Projects.find().count() === 0) {
 	});
 
 	var frameworkId = SkillCategories.insert({
-		category_title: 'Framework'
+		category_title: 'Frameworks'
 
 	});
 
@@ -46,32 +46,11 @@ if (Projects.find().count() === 0) {
 	});
 
 	var pmId = SkillCategories.insert({
-		category_title: 'Product/Product Management'
+		category_title: 'Product/Project Management'
 
-	});
-
-
-	SkillInds.insert({
-		skill_title: 'JavaScript',
-		category_id: languagesId
 	});
 
 	SkillInds.insert({
-		skill_title: 'Ruby',
-		category_id: languagesId
-	});
-
-	SkillInds.insert({
-		skill_title: 'HTML5',
-		category_id: languagesId
-	});
-
-	SkillInds.insert({
-		skill_title: 'CSS3',
-		category_id: languagesId
-	});
-
-		SkillInds.insert({
 		skill_title: 'JavaScript',
 		category_id: languagesId
 	});
@@ -150,6 +129,11 @@ if (Projects.find().count() === 0) {
 
 	SkillInds.insert({
 		skill_title: 'Office Suite',
+		category_id: pmId
+	});
+
+	SkillInds.insert({
+		skill_title: 'Tableau',
 		category_id: pmId
 	});
 
