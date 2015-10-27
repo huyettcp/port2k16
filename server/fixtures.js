@@ -4,23 +4,23 @@ if (Projects.find().count() === 0) {
 		title: 'Sabergraphs',
 		description: 'Sabergraphs is a data visualization of MLB team\'s payrolls and player\'s cost vs. performance score. This was my final project for General Assembly\'s Web Development Immersive.',
 		url: 'http://whispering-temple-2020.herokuapp.com/',
-		technology_1: 'Meteor.js',
-		technology_1_link: 'https://www.meteor.com/',
-		technology_2: 'Materialize front-end framework',
-		technology_2_link: 'http://materializecss.com/',
-		image_url: 'http://www.massvacation.com/blog/wp-content/uploads/2013/12/Colonial-Inn-in-Concord-MA.jpg'
+		technology_1: 'Ruby on Rails',
+		technology_1_link: 'http://rubyonrails.org/',
+		technology_2: 'D3.js',
+		technology_2_link: 'http://d3js.org/',
+		image_url: 'http://huyettcp.github.io/images/saber_screenshot.png'
 
 	});
 
 	Projects.insert({
 		title: 'Chippy Brew',
 		description: 'Simple RateBeer/Beer Advocate type beer review site. My first website built with Meteor.',
-		url: 'http://whispering-temple-2020.herokuapp.com/',
-		technology_1: 'Ruby on Rails',
+		url: 'http://chippybrew.meteor.com/',
+		technology_1: 'Meteor.js',
 		technology_1_link: 'https://www.meteor.com/',
-		technology_2: 'D3.js',
+		technology_2: 'Materialize',
 		technology_2_link: 'http://materializecss.com/',
-		image_url: 'http://euroclub.mit.edu/uploads/concord.jpg'
+		image_url: 'images/chippy_brew_screenshot.png'
 
 	});
 
