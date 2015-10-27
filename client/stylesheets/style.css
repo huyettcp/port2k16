@@ -1,7 +1,15 @@
+body {
+	background-color: #fafafa;
+}
+
 #header {
 	background-color: #006064;
 	padding-top: 1rem;
 
+}
+
+#about_push {
+	padding-top: 2rem;
 }
 
 .header_tabs {
@@ -13,14 +21,19 @@
 	text-align: left !important;
 }
 
+.tabs .tab a {
+	color: #ff9100
+}
+
+
+
 div.indicator {
 	width: 20% !important;
 	height: 3px !important;
-}
-
-body{
+	background-color: #ff9100 !important;
 
 }
+
 
 .custom-show-btn {
   position: absolute; 
@@ -39,5 +52,18 @@ body{
 	font-size: 14px;
 }
 
+.tabs .tab a:hover {
+  color: #ff9100 !important;
+  cursor: pointer !important;
+}
+
+a{
+	cursor: pointer !important;
+	color: #009688;
+}
+
+h3 {
+
+}
 
 
