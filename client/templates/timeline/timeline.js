@@ -26,7 +26,7 @@ $('#timeline-container-custom-classes').timelineMe({
       type: 'bigItem',
       label: '<span class="date_box">2015</span>',
       shortContent: '<b>Data Analytics Student</b> // General Assembly<br>Boston, MA (9/2015-11/2015)',
-      fullContent: '<b>Data Analytics Student</b> // General Assembly<br>Boston, MA (9/2015-11/2015)<br><ul><li>&bull; 10-Week Part-Time Course</li><li>&bull; Training in SQL, Excel, and Tableau</li><li>&bull; Link to Final Project</li></ul>',
+      fullContent: '<b>Data Analytics Student</b> // General Assembly<br>Boston, MA (9/2015-11/2015)<br><ul><li>&bull; 10-Week Part-Time Course</li><li>&bull; Training in SQL, Excel, and Tableau</li></ul>',
       showMore: '<a class="custom-show-btn"><i class="material-icons plus">add</i></a>',
       showLess: '<a class="custom-show-btn"><i class="material-icons plus">remove</i></a>',
 
