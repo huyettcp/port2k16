@@ -1,6 +1,32 @@
 // if (Projects.find().count() === 0) {
 
 // 	Projects.insert({
+// 		title: 'Plot Point',
+// 		description: 'Plot Point is a database that visualizes movie box-office data. This was my final project for General Assembly\'s Data Analytics course, which I completed in November 2015.',
+// 		url: 'http://plotpoint.mod.bz/',
+// 		technology_1: 'Meteor.js',
+// 		technology_1_link: 'https://www.meteor.com/',
+// 		technology_2: 'Highcharts',
+// 		technology_2_link: 'http://www.highcharts.com/',
+// 		image_url: 'images/plotpoint_screenshot.png',
+// 		github_url: 'https://github.com/huyettcp/box_office/'
+
+// 	});
+	
+// 	Projects.insert({
+// 		title: 'Chippy Brew',
+// 		description: 'Simple RateBeer/Beer Advocate type beer review site. My first website built with Meteor.',
+// 		url: 'chippybrew.mod.bz',
+// 		technology_1: 'Meteor.js',
+// 		technology_1_link: 'https://www.meteor.com/',
+// 		technology_2: 'Materialize',
+// 		technology_2_link: 'http://materializecss.com/',
+// 		image_url: 'images/chippy_brew_screenshot.png',
+// 		github_url: 'https://github.com/huyettcp/beer_rater/'
+
+// 	});
+
+// 	Projects.insert({
 // 		title: 'Sabergraphs',
 // 		description: 'Sabergraphs is a data visualization of MLB team\'s payrolls and player\'s cost vs. performance score. This was my final project for General Assembly\'s Web Development Immersive.',
 // 		url: 'http://whispering-temple-2020.herokuapp.com/',
@@ -8,19 +34,8 @@
 // 		technology_1_link: 'http://rubyonrails.org/',
 // 		technology_2: 'D3.js',
 // 		technology_2_link: 'http://d3js.org/',
-// 		image_url: 'http://huyettcp.github.io/images/saber_screenshot.png'
-
-// 	});
-
-// 	Projects.insert({
-// 		title: 'Chippy Brew',
-// 		description: 'Simple RateBeer/Beer Advocate type beer review site. My first website built with Meteor.',
-// 		url: 'http://chippybrew.meteor.com/',
-// 		technology_1: 'Meteor.js',
-// 		technology_1_link: 'https://www.meteor.com/',
-// 		technology_2: 'Materialize',
-// 		technology_2_link: 'http://materializecss.com/',
-// 		image_url: 'images/chippy_brew_screenshot.png'
+// 		image_url: 'images/saber_screenshot.png',
+// 		github_url: 'https://github.com/huyettcp/project_3/'
 
 // 	});
 
