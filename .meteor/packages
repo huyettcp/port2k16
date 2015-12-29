@@ -21,3 +21,4 @@ iron:router
 materialize:materialize@=0.97.0
 sacha:spin
 meteorhacks:fast-render
+meteorhacks:subs-manager

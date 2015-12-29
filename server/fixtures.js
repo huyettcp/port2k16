@@ -1,4 +1,16 @@
 if (Projects.find().count() === 0) {
+	Projects.insert({
+		title: 'Movie Keeper',
+		description: 'Movie Keeper is a simple app that lets you keep track of a rate movies you have watched. All you do is enter the title, and information about the movie is loaded via the OMDB API. This is the first website that I build in React.js',
+		url: 'http://moviekeeper.mod.bz/',
+		technology_1: 'React.js',
+		technology_1_link: 'https://facebook.github.io/react/',
+		technology_2: 'OMDb API',
+		technology_2_link: 'http://www.omdbapi.com/',
+		image_url: 'images/movie_keeper.png',
+		github_url: 'https://github.com/huyettcp/movie_keeper'
+
+	});
 
 	Projects.insert({
 		title: 'Plot Point',
